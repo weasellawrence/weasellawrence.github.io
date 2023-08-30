@@ -34,13 +34,13 @@ Net worth:  $86,000,000,000,000,000.
         <p>Keywords are system and cars. All lowercase. Use clear to close all.</p>
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
-        <input style = "display:none" id= "clearancein"/>
+        <input style = "display:none" id= "cli"/>
         <embed style="display:none" id = "system" src="system1.txt"></embed>
         <embed style="display:none" id = "cars" src="cars1.txt"></embed>
         <script>
             var cl = 0
 var input = document.getElementById("input")
-var clearance = document.getElementById("clearancein")
+var clearance = document.getElementById("cli")
 input.onchange = () => {
     if (input.value === "system") {
         document.getElementById("system").style.display = ""
@@ -53,7 +53,7 @@ input.onchange = () => {
         document.getElementById("system").style.display = "none"
     }
     else if (input.value ==="clearance") {
-        document.getElementById("clearancein").style.display = ""
+        clearance.style.display = ""
     }
     }    
 
