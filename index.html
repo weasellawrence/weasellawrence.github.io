@@ -60,7 +60,7 @@ input.onchange = () => {
 clearance.onchange = () => {
     if (clearance.value === "password") {
         cl = 1
-        document.getElementById("cll").innerHTML = "Clearance Level: " + cl
+        document.getElementById("cll").innerText = "Clearance Level: " + cl
     } else if (clearance.value === "imagefinder") {
         cl = 2
         document.getElementById("cll").innerText = "Clearance Level: " + cl
@@ -78,7 +78,7 @@ clearance.onchange = () => {
         document.getElementById("cll").innerText = "Clearance Level: " + cl
     } else if (clearance.value === "theonetruegod") {
         cl = 7
-        document.getElementById("cll").innerHTML = "Clearance Level: " + cl
+        document.getElementById("cll").innerText = "Clearance Level: " + cl
     } 
 }
         </script>
