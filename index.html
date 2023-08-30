@@ -13,17 +13,28 @@
         
     </head>
     <body>
+        <h1>Welcome to Buckbear.</h1>
+        <p>Hello and welcome to Buckbear™’s main page! We are an exotic car brand that brings cars to the max! With our team of 20,000,000,000 scientists, we are able to take innovation to vehicles! We’ve been able to kidnap aliens and bring them to our workforce, boosting efficiency and morale, and also helping us use new technologies from foreign, but untested sources. Because these new technologies might be unstable, we go through strict safety procedures including hitting the cars with shovels and seeing if they explode. If they do, we send them to the Russian government, so this technology won’t go to waste. We have only suffered 3,000,000 casualties. All but one were human. Although very sad, we have pushed through we are working to raise the number of workers, so we still have enough to expand our business. We have 2 factories so far, both being 60,000,000 square miles not including the workers' restrooms, laboratories, prisons, and barracks. We hope to buy Area 51 to build more factories soon. We also hope to abduct any aliens or workers to join our cause. This will require many torturing techniques, professors, and private cellars. Explore more in our records. Our main headquarters is in ███████████ █████ ███.</p>
+        <p>To Learn more, use the input below.</p>
+        <p>Keywords are system, records, and cars. All lowercase.</p>
         <input id= "input"/>
+        <p id="system" display="none"></p>
+        <p id="records" display="none"></p>
+        <p id="cars" display="none"></p>
         <script>
 var input = document.getElementById("input")
 input.onchange = () => {
-    if (input.value === "More Stoats") {
-        document.getElementById("morestoat").style.display = ""
-        document.getElementById("morestoat2").style.display = ""
-    }  else if (input.value === "Remove Extra Stoats") {
-        document.getElementById("morestoat").style.display = "none"
-        document.getElementById("morestoat2").style.display = "none"
-    }      
+    if (input.value === "system") {
+        var system = document.getElementById("system")
+        system.style.display = ""
+    }  else if (input.value === "records") {
+        var records = document.getElementById("records")
+        records.style.display = ""
+    }    
+    else if (input.value === "cars") {
+        var cars = document.getElementById("cars")
+        cars.style.display = ""
+    }    
 }
         </script>
     </body>
