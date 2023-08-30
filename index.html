@@ -37,13 +37,27 @@ Net worth:  $86,000,000,000,000,000
         <embed style="display:none" id = "system" src="system1.txt"></embed>
         <embed style="display:none" id = "cars" src="cars1.txt"></embed>
         <script>
+            var cs = 0
+            var ss = 0
 var input = document.getElementById("input")
 input.onchange = () => {
     if (input.value === "system") {
+        if (ss === 0) {
         document.getElementById("system").style.display = ""
+            ss = 1
+        } else {
+            document.getElementById("system").style.display = "none"
+            ss = 0
+        }
     }  
     else if (input.value === "cars") {
+        if (cs === 0) {
         document.getElementById("cars").style.display = ""
+            cs = 1
+        } else {
+            document.getElementById("cars").style.display = "none"
+            cs = 0
+        }
     }    
 }
         </script>
