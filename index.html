@@ -16,30 +16,31 @@
         <h1>Welcome to Buckbear.</h1>
         <p>
 Hello and welcome to Buckbear™’s informative page! We are an exotic car brand that brings cars to the max! With our team of 20,000,000,000 scientists, we are able to take innovation to vehicles! We’ve been able to kidnap aliens and bring them to our workforce, boosting efficiency and morale, and also helping us use new technologies from foreign, but untested sources. Because these new technologies might be unstable, we go through strict safety procedures including hitting the cars with shovels and seeing if they explode. If they do, we send them to the Russian government, so this technology won’t go to waste. We have only suffered 3,000,000 casualties. All but one were human. Although very sad, we have pushed through we are working to raise the number of workers, so we still have enough to expand our business. We have 2 factories so far, both being 60,000,000 square miles not including the workers' restrooms, laboratories, prisons, and barracks. We hope to buy Area 51 to build more factories soon. We also hope to abduct any aliens or workers to join our cause. This will require many torturing techniques, professors, and private cellars. Explore more in our records. Our main headquarters is in ███████████ █████ ███. Thank you for your time. 
-Buckbear™ Directory
-Founder: Buck Bear, passed in 2023
-Owner: Yorm Om, yom@buckbear.com
-Manager: Willma Butfit, wbufit@buckbear.com 
-Factory 1 Director: Ialway Slose, islose@buckbear.com
-Factory 2 director: Breiana Utthead, butthead@buckbear.com
-Administration director: Reall Eedumb, reedumb@buckbear.com
-Chief treasurer: Cash Ierr Obber, cobber@buckbear.com
-Buckbear™ Statistics
-Average yearly profit: $10,000,000,000,000
-Average annual spending: $2,000,000,000,000
-Year founded: 2022
-Year bought by Victoria’s Secret™: 2025
-Net worth:  $86,000,000,000,000,000
+Buckbear™ Directory:
+Founder: Buck Bear, passed in 2023.
+Owner: Yorm Om, yom@buckbear.com.
+Manager: Willma Butfit, wbufit@buckbear.com.
+Factory 1 Director: Ialway Slose, islose@buckbear.com.
+Factory 2 director: Breiana Utthead, butthead@buckbear.com.
+Administration director: Reall Eedumb, reedumb@buckbear.com.
+Chief treasurer: Cash Ierr Obber, cobber@buckbear.com.
+Buckbear™ Statistics:
+Average yearly profit: $10,000,000,000,000.
+Average annual spending: $2,000,000,000,000.
+Year founded: 2022.
+Net worth:  $86,000,000,000,000,000.
 </p>
         <p>To Learn more, use the input below.</p>
         <p>Keywords are system and cars. All lowercase. Use clear to close all.</p>
+        <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
+        <input style = "display:none" id= "clearancein"/>
         <embed style="display:none" id = "system" src="system1.txt"></embed>
         <embed style="display:none" id = "cars" src="cars1.txt"></embed>
         <script>
-            var cs = 0
-            var ss = 0
+            var cl = 0
 var input = document.getElementById("input")
+var clearance = document.getElementById("clearancein")
 input.onchange = () => {
     if (input.value === "system") {
         document.getElementById("system").style.display = ""
@@ -51,7 +52,17 @@ input.onchange = () => {
         document.getElementById("cars").style.display = "none"
         document.getElementById("system").style.display = "none"
     }
+    else if (input.value ==="clearance") {
+        document.getElementById("clearancein").style.display = ""
+    }
     }    
+
+clearance.onchange = () => {
+    if (clearance.value === "password") {
+        document.getElementById("cll").innertext = "Clearance Level 1"
+        cl = 1
+    }
+}
         </script>
     </body>
 </html>
