@@ -31,26 +31,31 @@ Year founded: 2022.
 Net worth:  $86,000,000,000,000,000.
 </p>
         <p>To Learn more, use the input below.</p>
-        <p>Keywords are system and cars. All lowercase. Use clear to close all.</p>
+        <p>Keywords are system, records, cars and crimes, followed by the version of the document you want. Not all documents are avalible to everybody. To learn more, read system1. All lowercase. Use clear to close all.</p>
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
         <input style = "display:none" id= "cli"/>
-        <embed style="display:none" id = "system" src="system1.txt"></embed>
-        <embed style="display:none" id = "cars" src="cars1.txt"></embed>
+        <embed style="display:none" id = "system1" src="system1.txt"></embed>
+        <embed style="display:none" id = "cars1" src="cars1.txt"></embed>
+        <embed style="display:none" id = "cars2" src="cars2.txt"></embed>
+        <embed style="display:none" id = "crimes1" src="crimes1.txt"></embed>
+        <embed style="display:none" id = "records1" src="records1.txt"></embed>
+        <embed style="display:none" id = "records2" src="records2.txt"></embed>
+        <embed style="display:none" id = "system2" src="system2.txt"></embed>
         <script>
             var cl = 0
 var input = document.getElementById("input")
 var clearance = document.getElementById("cli")
 input.onchange = () => {
-    if (input.value === "system") {
-        document.getElementById("system").style.display = ""
+    if (input.value === "system1") {
+        document.getElementById("system1").style.display = ""
         } 
-    else if (input.value === "cars") {
-        document.getElementById("cars").style.display = ""
+    else if (input.value === "cars1") {
+        document.getElementById("cars1").style.display = ""
         }
     else if (input.value === "clear") {
-        document.getElementById("cars").style.display = "none"
-        document.getElementById("system").style.display = "none"
+        document.getElementById("cars1").style.display = "none"
+        document.getElementById("system1").style.display = "none"
     }
     else if (input.value ==="clearance") {
         clearance.style.display = ""
