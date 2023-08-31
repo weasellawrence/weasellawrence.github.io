@@ -73,5 +73,6 @@ clearance.onchange = () => {
         document.getElementById("cll").innerText = "Clearance Level: " + cl
     } else if (clearance.value === "open" && cl >= 1) {
         document.getElementById("body").style.display = "none"
+        document.getElementById("workspace").style.display = ""
     }
 }
