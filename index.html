@@ -53,6 +53,9 @@ Net worth:  $86,000,000,000,000,000.
                 <li onclick="openDesign()">Design</li>
                 <li onclick="openOther()">Other</li>
             </ul>
+            <p style="display:none" id="manage">manage</p>
+            <p style="display:none" id="design">design</p>
+            <p style="display:none" id="other">other</p>
             </div>
     </body>
     <script>
@@ -135,15 +138,15 @@ clearance.onchange = () => {
     }
 }
     function openManage () {
-  
+  document.getElementById("manage").style.display = ""
 }
 
 function openDesign () {
-  
+  document.getElementById("design").style.display = ""
 }
 
 function openOther () {
-  
+  document.getElementById("other").style.display = ""
 }
     </script>
 </html>
