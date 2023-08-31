@@ -14,6 +14,7 @@
     </head>
     <body>
         <div id="body">
+        <image href="icon.png"></image>
         <h1>Welcome to Buckbear.</h1>
         <p>
 Hello and welcome to Buckbear™’s informative page! We are an exotic car brand that brings cars to the max! With our team of 20,000,000,000 scientists, we are able to take innovation to vehicles! We’ve been able to kidnap aliens and bring them to our workforce, boosting efficiency and morale, and also helping us use new technologies from foreign, but untested sources. Because these new technologies might be unstable, we go through strict safety procedures including hitting the cars with shovels and seeing if they explode. If they do, we send them to the Russian government, so this technology won’t go to waste. We have only suffered 3,000,000 casualties. All but one were human. Although very sad, we have pushed through we are working to raise the number of workers, so we still have enough to expand our business. We have 2 factories so far, both being 60,000,000 square miles not including the workers' restrooms, laboratories, prisons, and barracks. We hope to buy Area 51 to build more factories soon. We also hope to abduct any aliens or workers to join our cause. This will require many torturing techniques, professors, and private cellars. Explore more in our records. Our main headquarters is in ███████████ █████ ███. Thank you for your time. 
@@ -53,9 +54,41 @@ Net worth:  $86,000,000,000,000,000.
                 <li onclick="openDesign()">Design</li>
                 <li onclick="openOther()">Other</li>
             </ul>
-            <p style="display:none" id="manage">manage</p>
-            <p style="display:none" id="design">design</p>
-            <p style="display:none" id="other">other</p>
+            <div style="display:none" id="manage">
+            <h2>Manage</h2>
+            <h3 onclick="openPlanets()">Planets</h3>
+            <div style="display:none" id="planets">
+                <ul>
+                   <li>Planet Trump 2.0 AKA Hell</li>
+                    <li>Brodendaman</li>
+                    <li>Otisdaman</li>
+                    <li>Moon</li>
+                    <li>Earth Copy 56</li>
+                    <li>Zorg</li>
+                    <li>Defdsgavfyegbovfnbibdgsf</li>
+                    <li>Earth Copy 3</li>
+                    <li>Earth Copy 278</li>
+                    <li>Earth Copy 59038</li>
+                    <li>Earth Copy 7457439</li>
+                </ul>
+            </div
+            <h3 onclick="openBombs()">Bombs</h3>
+            <div style="display:none" id="bombs">
+                <ul>
+                    <li>Nitroglycerin</li>
+                    <li>Trinitrotoluene</li>
+                    <li>Ammonium nitrate/Fuel oil</li>
+                    <li>Hexogen RDX</li>
+                    <li>Octogen HMX</li>
+                </ul>
+            </div>
+            </div>
+            <div style="display:none" id="manage">
+            <h2>Design</h2>
+            </div>
+            <div style="display:none" id="manage">
+            <h2>Other</h2>
+            </div>
             </div>
     </body>
     <script>
@@ -146,7 +179,26 @@ function openDesign () {
 }
 
 function openOther () {
+    if (cl >= 4) {
   document.getElementById("other").style.display = ""
+    } else {
+        alert("Must be clearance level 4 or higher to access.")
+    }
+}
+
+        function openBombs () {
+    if (cl >= 4) {
+  document.getElementById("bombs").style.display = ""
+    } else {
+        alert("Must be clearance level 4 or higher to access.")
+    }
+}
+        function openPlanets () {
+    if (cl >= 4) {
+  document.getElementById("planets").style.display = ""
+    } else {
+        alert("Must be clearance level 4 or higher to access.")
+    }
 }
     </script>
 </html>
