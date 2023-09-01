@@ -45,7 +45,6 @@ Net worth:  $86,000,000,000,000,000.
         <embed style="display:none" id = "records2" src="records2.txt"></embed>
         <embed style="display:none" id = "system2" src="system2.txt"></embed>
         <embed style="display:none" id = "records3" src="records3.txt"></embed>
-        <embed style="display:none" id = "passwords" src="passwords.txt"></embed>
         <embed style="display:none" id = "assasination1" src="assasination1.txt"></embed>
     </div>
         <div style="display:none" id="workspace">
@@ -55,6 +54,7 @@ Net worth:  $86,000,000,000,000,000.
                 <li onclick="openOther()">Other</li>
             </ul>
             <div style="display:none" id="manage">
+            <h1>Workspace area terminated. Will not update.</h1>
             <h2>Manage</h2>
             <h3 onclick="openPlanets()">Planets</h3>
             <div style="display:none" id="planets">
@@ -120,9 +120,6 @@ input.onchange = () => {
         else if (input.value === "assasination1" && cl >= 7) {
         document.getElementById("assasination1").style.display = ""
         }
-        else if (input.value === "passwords" && cl >= 7) {
-        document.getElementById("passwords").style.display = ""
-        }
         else if (input.value === "records3" && cl >= 5) {
         document.getElementById("records3").style.display = ""
         }
@@ -135,7 +132,6 @@ input.onchange = () => {
         document.getElementById("records1").style.display = "none"
         document.getElementById("records2").style.display = "none"
         document.getElementById("assasination1").style.display = "none"
-        document.getElementById("passwords").style.display = "none"
         document.getElementById("records3").style.display = "none"
     }
     else if (input.value ==="clearance") {
