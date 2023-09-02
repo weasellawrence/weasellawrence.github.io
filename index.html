@@ -32,7 +32,7 @@
         input.onchange = () => {
             for (var i=0;i<passwords.length;i++) {
                 if (input.value == passwords[i]) {
-                    cl = i
+                    texts[i].style.display = "none"
                 }
             }
             if (input.value == "clear") {
