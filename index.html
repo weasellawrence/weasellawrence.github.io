@@ -18,8 +18,8 @@
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
         
-        <embed style="" class="texts" id = "system1" src="hdakyitlioercoirinioroiposlorosequmezuxal/system1"></embed>
-        <embed style="display:none" class="texts" id = "cars1" src="hdakyitlioercoirinioroiposlorosequmezuxal/cars1.txt"></embed>
+        <embed class="texts" id = "system1" href="hdakyitlioercoirinioroiposlorosequmezuxal/system1"></embed>
+        <embed class="texts" id = "cars1" src="hdakyitlioercoirinioroiposlorosequmezuxal/cars1"></embed>
         
     </body>
     <script>
@@ -35,11 +35,7 @@
                     cl = i+1
                 }
             }
-            if (input.value == "clear") {
-                for (var i=0;i<texts.length;i++) {
-                    texts[i].style.display = "none"
-                }
-            }
+           
             clt.innerText = "Clearance Level: " + cl
         }
     </script>
