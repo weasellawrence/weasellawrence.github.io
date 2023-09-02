@@ -13,102 +13,18 @@
         </style>
     </head>
     <body>
-        <div id="body">
-        <image href="icon.png"></image>
-        <h1>Welcome to Buckbear.</h1>
-        <p>
-Hello and welcome to Buckbear™’s informative page! We are an exotic car brand that brings cars to the max! With our team of 20,000,000,000 scientists, we are able to take innovation to vehicles! We’ve been able to kidnap aliens and bring them to our workforce, boosting efficiency and morale, and also helping us use new technologies from foreign, but untested sources. Because these new technologies might be unstable, we go through strict safety procedures including hitting the cars with shovels and seeing if they explode. If they do, we send them to the Russian government, so this technology won’t go to waste. We have only suffered 3,000,000 casualties. All but one were human. Although very sad, we have pushed through we are working to raise the number of workers, so we still have enough to expand our business. We have 2 factories so far, both being 60,000,000 square miles not including the workers' restrooms, laboratories, prisons, and barracks. We hope to buy Area 51 to build more factories soon. We also hope to abduct any aliens or workers to join our cause. This will require many torturing techniques, professors, and private cellars. Explore more in our records. Our main headquarters is in ███████████ █████ ███. Thank you for your time. 
-Buckbear™ Directory:
-Founder: Buck Bear, passed in 2023.
-Owner: Yorm Om, yom@buckbear.com.
-Manager: Willma Butfit, wbufit@buckbear.com.
-Factory 1 Director: Ialway Slose, islose@buckbear.com.
-Factory 2 director: Breiana Utthead, butthead@buckbear.com.
-Administration director: Reall Eedumb, reedumb@buckbear.com.
-Chief treasurer: Cash Ierr Obber, cobber@buckbear.com.
-Buckbear™ Statistics:
-Average yearly profit: $10,000,000,000,000.
-Average annual spending: $2,000,000,000,000.
-Year founded: 2022.
-Net worth:  $86,000,000,000,000,000.
-</p>
-        <p>To Learn more, use the input below.</p>
-        <p>Keywords are system, records, cars and crimes, followed by the version of the document you want. Not all documents are avalible to everybody. To learn more, read system1. All lowercase. Use clear to close all.</p>
+        <img href="icon.png"></img>
+        
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
-        <input style = "display:none" id= "cli"/>
+        
         <div id="texts">
         <embed style="display:none" class="texts" id = "system1" src="system1.txt"></embed>
         <embed style="display:none" class="texts" id = "cars1" src="cars1.txt"></embed>
         </div>
-    </div>
+        
     </body>
     <script>
         
-        var cl = 0
-var input = document.getElementById("input")
-var clearance = document.getElementById("cli")
-var docs = document.getElementById("texts")
-input.onchange = () => {
-    
-    document.getElementById(input.value)?.style.display = ""
-    texts = document.getElementsByClassName("texts")
-
-    switch(cl) {
-        case 1:
-            docs.innerHTML +=
-                "<embed style="display:none" class="texts" id = "discoveries1" src="discoveries1.txt"></embed>"
-            break
-        case 2:
-            break
-        case 3:
-            break
-        case 4:
-            break
-        case 5:
-            break
-        case 6:
-            break
-        case 7:
-            break
-    }
-    
-    if (input.value === "clear") {
-        for (i=0; i<texts.length; i++){
-            texts[i]?.style.display = "none"
-        }
-    }
-    else if (input.value ==="clearance") {
-        clearance.style.display = ""
-    }
-    }    
-
-clearance.onchange = () => {
-    if (clearance.value === "password") {
-        cl = 1
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "imagefinder") {
-        cl = 2
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "hellbringer") {
-        cl = 3
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "industrialprogressor") {
-        cl = 4
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "missionariesofagod") {
-        cl = 5
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "leaderofanarmy") {
-        cl = 6
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "theonetruegod") {
-        cl = 7
-        document.getElementById("cll").innerText = "Clearance Level: " + cl
-    } else if (clearance.value === "open" && cl >= 1) {
-        document.getElementById("body").style.display = "none"
-        document.getElementById("workspace").style.display = ""
-    }
-}
     </script>
 </html>
