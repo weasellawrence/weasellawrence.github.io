@@ -32,15 +32,15 @@
         input.onchange = () => {
             for (var i=0;i<passwords.length;i++) {
                 if (input.value == passwords[i]) {
-                    texts[i].style.display = "none"
+                    cl = i+1
                 }
             }
             if (input.value == "clear") {
-                for (var i=o;i<texts.length;i++) {
+                for (var i=0;i<texts.length;i++) {
                     texts[i].style.display = "none"
                 }
             }
-            clt.textContent = "Clearance Level: " + cl
+            clt.innerText = "Clearance Level: " + cl
         }
     </script>
 </html>
