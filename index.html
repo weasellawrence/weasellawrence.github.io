@@ -9,22 +9,38 @@
         background: rgb(130, 134, 140);
         font-family: 'Lora', serif;
         line-height:39px;
-      }
+            }
         </style>
     </head>
     <body>
-        <img href="icon.png"></img>
+        <img src="icon.png"></img>
         
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
         
-        <div id="texts">
-        <embed style="display:none" class="texts" id = "system1" src="system1.txt"></embed>
+        <embed style="" class="texts" id = "system1" src="system1.txt"></embed>
         <embed style="display:none" class="texts" id = "cars1" src="cars1.txt"></embed>
-        </div>
         
     </body>
     <script>
-        
+        var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmy","theonetruegod"]
+        var cl = 0
+
+        var texts = document.getElementsByClassName("texts")
+        var clt = document.getElementById("cll")
+        var input = document.getElementById("input")
+        input.onchange = () => {
+            for (var i=0;i<passwords.length;i++) {
+                if (input.value == passwords[i]) {
+                    cl = i
+                }
+            }
+            if (input.value == clear) {
+                for (var i=o;i<texts.length;i++) {
+                    texts[i].style.display = "none"
+                }
+            }
+            clt.innerText = "Clearance Level: " + cl
+        }
     </script>
 </html>
