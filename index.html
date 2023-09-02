@@ -37,102 +37,46 @@ Net worth:  $86,000,000,000,000,000.
         <p id="cll">Clearance Level: 0</p>
         <input id= "input"/>
         <input style = "display:none" id= "cli"/>
-        <embed style="display:none" id = "system1" src="system1.txt"></embed>
-        <embed style="display:none" id = "cars1" src="cars1.txt"></embed>
-        <embed style="display:none" id = "cars2" src="cars2.txt"></embed>
-        <embed style="display:none" id = "crimes1" src="crimes1.txt"></embed>
-        <embed style="display:none" id = "records1" src="records1.txt"></embed>
-        <embed style="display:none" id = "records2" src="records2.txt"></embed>
-        <embed style="display:none" id = "system2" src="system2.txt"></embed>
-        <embed style="display:none" id = "records3" src="records3.txt"></embed>
-        <embed style="display:none" id = "assasination1" src="assasination1.txt"></embed>
+        <div id="texts">
+        <embed style="display:none" class="texts" id = "system1" src="system1.txt"></embed>
+        <embed style="display:none" class="texts" id = "cars1" src="cars1.txt"></embed>
+        </div>
     </div>
-        <div style="display:none" id="workspace">
-            <ul>
-                <li onclick="openManage()">Manage</li>
-                <li onclick="openDesign()">Design</li>
-                <li onclick="openOther()">Other</li>
-            </ul>
-            <div style="display:none" id="manage">
-            <h1>Workspace area terminated. Will not update.</h1>
-            <h2>Manage</h2>
-            <h3 onclick="openPlanets()">Planets</h3>
-            <div style="display:none" id="planets">
-                <ul>
-                   <li>Planet Trump 2.0 AKA Hell</li>
-                    <li>Brodendaman</li>
-                    <li>Otisdaman</li>
-                    <li>Moon</li>
-                    <li>Earth Copy 56</li>
-                    <li>Zorg</li>
-                    <li>Defdsgavfyegbovfnbibdgsf</li>
-                    <li>Earth Copy 3</li>
-                    <li>Earth Copy 278</li>
-                    <li>Earth Copy 59038</li>
-                    <li>Earth Copy 7457439</li>
-                </ul>
-            </div>
-            <h3 onclick="openBombs()">Bombs</h3>
-            <div style="display:none" id="bombs">
-                <ul>
-                    <li>Nitroglycerin</li>
-                    <li>Trinitrotoluene</li>
-                    <li>Ammonium nitrate/Fuel oil</li>
-                    <li>Hexogen RDX</li>
-                    <li>Octogen HMX</li>
-                </ul>
-            </div>
-            </div>
-            <div style="display:none" id="manage">
-            <h2>Design</h2>
-            </div>
-            <div style="display:none" id="manage">
-            <h2>Other</h2>
-            </div>
-            </div>
     </body>
     <script>
+        
         var cl = 0
 var input = document.getElementById("input")
 var clearance = document.getElementById("cli")
+var docs = document.getElementById("texts")
 input.onchange = () => {
-    if (input.value === "system1") {
-        document.getElementById("system1").style.display = ""
-        } 
-    else if (input.value === "cars1") {
-        document.getElementById("cars1").style.display = ""
+    
+    document.getElementById(input.value)?.style.display = ""
+    texts = document.getElementsByClassName("texts")
+
+    switch(cl) {
+        case 1:
+            docs.innerHTML +=
+                "<embed style="display:none" class="texts" id = "discoveries1" src="discoveries1.txt"></embed>"
+            break
+        case 2:
+            break
+        case 3:
+            break
+        case 4:
+            break
+        case 5:
+            break
+        case 6:
+            break
+        case 7:
+            break
+    }
+    
+    if (input.value === "clear") {
+        for (i=0; i<texts.length; i++){
+            texts[i]?.style.display = "none"
         }
-        else if (input.value === "cars2" && cl >= 6) {
-        document.getElementById("cars2").style.display = ""
-        }
-        else if (input.value === "crimes1" && cl >= 6) {
-        document.getElementById("crimes1").style.display = ""
-        }
-        else if (input.value === "system2" && cl >= 5) {
-        document.getElementById("system2").style.display = ""
-        }
-        else if (input.value === "records2" && cl >= 4) {
-        document.getElementById("records2").style.display = ""
-        }
-        else if (input.value === "records1" && cl >= 1) {
-        document.getElementById("records1").style.display = ""
-        }
-        else if (input.value === "assasination1" && cl >= 7) {
-        document.getElementById("assasination1").style.display = ""
-        }
-        else if (input.value === "records3" && cl >= 5) {
-        document.getElementById("records3").style.display = ""
-        }
-    else if (input.value === "clear") {
-        document.getElementById("cars1").style.display = "none"
-        document.getElementById("system1").style.display = "none"
-        document.getElementById("cars2").style.display = "none"
-        document.getElementById("system2").style.display = "none"
-        document.getElementById("crimes1").style.display = "none"
-        document.getElementById("records1").style.display = "none"
-        document.getElementById("records2").style.display = "none"
-        document.getElementById("assasination1").style.display = "none"
-        document.getElementById("records3").style.display = "none"
     }
     else if (input.value ==="clearance") {
         clearance.style.display = ""
@@ -164,36 +108,6 @@ clearance.onchange = () => {
     } else if (clearance.value === "open" && cl >= 1) {
         document.getElementById("body").style.display = "none"
         document.getElementById("workspace").style.display = ""
-    }
-}
-    function openManage () {
-  document.getElementById("manage").style.display = ""
-}
-
-function openDesign () {
-  document.getElementById("design").style.display = ""
-}
-
-function openOther () {
-    if (cl >= 4) {
-  document.getElementById("other").style.display = ""
-    } else {
-        alert("Must be clearance level 4 or higher to access.")
-    }
-}
-
-        function openBombs () {
-    if (cl >= 4) {
-  document.getElementById("bombs").style.display = ""
-    } else {
-        alert("Must be clearance level 4 or higher to access.")
-    }
-}
-        function openPlanets () {
-    if (cl >= 4) {
-  document.getElementById("planets").style.display = ""
-    } else {
-        alert("Must be clearance level 4 or higher to access.")
     }
 }
     </script>
