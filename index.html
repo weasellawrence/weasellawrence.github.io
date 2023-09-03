@@ -50,7 +50,7 @@
     var input = document.getElementById("input")
     input.onchange = () => {
         
-        for (var i=0;i<passwords.length;i++) {
+        for (var i=0;i<passwords.length+1;i++) {
             if (input.value == passwords[i]) {
                 cl = i + 1
             }
