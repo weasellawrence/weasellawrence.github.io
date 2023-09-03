@@ -18,18 +18,34 @@
         <p id="cll">Clearance Level: 0</p>
         <input id="input"/>
 
-        <div id="texts">
             <embed src="system1.txt"></embed>
             <embed src="cars1.txt"></embed>
             <embed src="products1.txt"></embed>
-        </div>
+            <embed style="display:none" class ="1 2 3 4 5 6" src="discoveries1.txt"></embed>
+            <embed style="display:none" class ="1 2 3 4 5 6" src="insideproducts1.txt"></embed>
+            <embed style="display:none" class ="1 2 3 4 5 6" src="records1.txt"></embed>
+            <embed style="display:none" class ="2 3 4 5 6" src="cars2.txt"></embed>
+            <embed style="display:none" class ="3 4 5 6" src="products2.txt"></embed>
+            <embed style="display:none" class ="3 4 5 6" src="records2.txt"></embed>
+            <embed style="display:none" class ="3 4 5 6" src="system2.txt"></embed>
+            <embed style="display:none" class ="4 5 6" src="crimes1.txt"></embed>
+            <embed style="display:none" class ="4 5 6" src="overtake1.txt"></embed>
+            <embed style="display:none" class ="4 5 6" src="products3.txt"></embed>
+            <embed style="display:none" class ="4 5 6" src="records3.txt"></embed>
+            <embed style="display:none" class ="5 6" src="hellscape1.txt"></embed>
+            <embed style="display:none" class ="6" src="assasination1.txt"></embed>
+            
         
     </body>
     <script>
         var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmy","theonetruegod"]
         var cl = 0
+        var texts = []
 
-        var texts = document.getElementById("texts")
+        for (var i=1;i<7;i++) {
+            texts[i-1] = document.getElementsByClassName(i)
+        }
+        
         var clt = document.getElementById("cll")
         var input = document.getElementById("input")
         input.onchange = () => {
@@ -38,30 +54,10 @@
                     cl = i+1
                 }
             }
-
-            switch (cl) {
-                case 1:
-                    texts.innerHTML += "<embed src='discoveries1.txt'></embed>"
-                    break
-                case 2:
-
-                    break
-                case 3:
-
-                    break
-                case 4:
-
-                    break
-                case 5:
-
-                    break
-                case 6:
-
-                    break
-                case 7:
-                    break
+            for (var i=0;i<texts[cl].length;i++) {
+                texts[cl][i].style.display = ""
             }
-            
+                        
             clt.innerText = "Clearance Level: " + cl
         }
     </script>
