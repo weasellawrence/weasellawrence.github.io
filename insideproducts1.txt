@@ -1,1 +1,9 @@
+Inside Products
 
+This file is used to document technology that is only used in the factories and work areas.
+
+Alien Mech Suit:
+Used to enhance aliens, put them into a similar body form, and keep them from getting away.
+
+Virtual locker: 
+Can fit a lot of stuff in a little space.
