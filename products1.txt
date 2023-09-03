@@ -1,1 +1,10 @@
+Microchips:
+CPU’s and GPU’s
+15AB
+15BB
+15AA
+16CA
+17BB
 
+Brain Microchips:
+ComBrain
