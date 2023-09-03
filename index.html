@@ -38,27 +38,34 @@
         
     </body>
     <script>
-        var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmy","theonetruegod"]
-        var cl = 0
-        var texts = []
+    var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmy","theonetruegod"]
+    var cl = 0
+    var texts = []
 
-        for (var i=1;i<7;i++) {
-            texts[i-1] = document.getElementsByClassName(i)
+    for (var i=1;i<7;i++) {
+        texts[i-1] = document.getElementsByClassName(i)
+    }
+    
+    var clt = document.getElementById("cll")
+    var input = document.getElementById("input")
+    input.onchange = () => {
+        var highestIndex = -1
+        
+        for (var i=0;i<passwords.length;i++) {
+            if (input.value == passwords[i]) {
+                highestIndex = i
+            }
         }
         
-        var clt = document.getElementById("cll")
-        var input = document.getElementById("input")
-        input.onchange = () => {
-            for (var i=0;i<passwords.length;i++) {
-                if (input.value == passwords[i]) {
-                    cl = i+1
-                }
-            }
-            for (var i=0;i<texts[cl].length;i++) {
-                texts[cl][i].style.display = ""
-            }
-                        
-            clt.innerText = "Clearance Level: " + cl
+        if (highestIndex !== -1) {
+            cl = highestIndex + 1
         }
-    </script>
+        
+        for (var i=0;i<texts[cl].length;i++) {
+            texts[cl][i].style.display = ""
+        }
+                    
+        clt.innerText = "Clearance Level: " + cl
+    }
+</script>
 </html>
