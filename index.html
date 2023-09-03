@@ -49,20 +49,15 @@
     var clt = document.getElementById("cll")
     var input = document.getElementById("input")
     input.onchange = () => {
-        var highestIndex = -1
         
         for (var i=0;i<passwords.length;i++) {
             if (input.value == passwords[i]) {
-                highestIndex = i
+                cl = i
             }
         }
         
-        if (highestIndex !== -1) {
-            cl = highestIndex + 1
-        }
-        
-        for (var i=0;i<texts[cl].length;i++) {
-            texts[cl][i].style.display = ""
+        for (var i=0;i<texts[cl-1].length;i++) {
+            texts[cl-1][i].style.display = ""
         }
                     
         clt.innerText = "Clearance Level: " + cl
