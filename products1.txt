@@ -1,4 +1,4 @@
-Products
+Products 
 
 Microchips:
 CPU’s and GPU’s
@@ -10,3 +10,19 @@ CPU’s and GPU’s
 
 Brain Microchips:
 ComBrain
+
+Foldable assault rifle:
+
+“The fold rifle”
+
+The foldable assault rifle is a 9 mm cal.
+Assault rifle discused as a pistol 
+6 inch length
+Five inch tall
+Cost 175 manufacture price
+1000 retail price
+Comes with a mag of 16 bullets
+200mm legth mag
+Made of steel
+
+Once fires the slide stays out and the middle of the slide folds down revealing a stock while a scope and barrel extension come out of the top and front. This gun is used as a cheap and effective way to neutralize targets. To re holster place bullet in the chamber under the scope and push the scope down then push the barrel into the gun, this is eject the mag and manually uncollapse the stock.
