@@ -13,6 +13,7 @@
         </style>
     </head>
     <body>
+        <div id = "total">
         <img src="icon.png"></img>
 
         <h1>Welcome to Buckbear</h1>
@@ -43,10 +44,110 @@
             <embed style="display:none" class ="5 6 7" src="hellscape1.txt"></embed>
             <embed style="display:none" class ="6 7" src="assasination1.txt"></embed>
             
-        
+        </div>
+        <div id = "golff">
+            <h2 id="gameTitle"><img src="icon.png"> Golf Hell v1.1.0</h2><br><br>
+	<h1 id="stats"><span id="levelName" style="color: #088">Level select</span><br>Hits: <span id="hits">0</span><br>Deaths: <span id="deaths" style="color: #844">0</span><br>Time: <span id="time">0</span></h1>
+	<p id="keybinds">Press R to restart<br>Press ESC to return to the menu</p>
+	<h1 id="levelStats"><span style="color: #080">0/45 levels beaten</span> <span id="stars"></span><br>Total hits: 0<br>Total time: 00:00.00</h1>
+	<p id="debugStats"></p>
+	<canvas id="grid" width="500px" height="500px"></canvas>
+	<div id="overlay">
+		<div id="finishMessage">
+			<br><h1 style="text-align: center; font-size: 32px;">Level complete!</h1><br>
+			<h1 style="margin-left: 16px" id="finishStats"></h1>
+			<button style="position: absolute; bottom: 50px; left: 75px; width: 150px" onclick="nextLevel()">Next level</button>
+			<button style="position: absolute; bottom: 4px; left: 75px; width: 150px; color: #088" onclick="loadLevel(currentLevel)">Retry level</button>
+		</div>
+		<div id="levelSelect">
+			<h1 style="font-size: 48px; margin-bottom: 20px; color: #048">Limbo</h1>
+			<div class="levelRow">
+				<div class="level row1" onclick="checkLoadLevel(1)" onMouseOver="loadLevelStats(1)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row1" onclick="checkLoadLevel(2)" onMouseOver="loadLevelStats(2)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row1" onclick="checkLoadLevel(3)" onMouseOver="loadLevelStats(3)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row1" onclick="checkLoadLevel(4)" onMouseOver="loadLevelStats(4)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row1" onclick="checkLoadLevel(5)" onMouseOver="loadLevelStats(5)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #606">Lust</h1>
+			<div class="levelRow">
+				<div class="level row2" onclick="checkLoadLevel(6)" onMouseOver="loadLevelStats(6)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row2" onclick="checkLoadLevel(7)" onMouseOver="loadLevelStats(7)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row2" onclick="checkLoadLevel(8)" onMouseOver="loadLevelStats(8)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row2" onclick="checkLoadLevel(9)" onMouseOver="loadLevelStats(9)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row2" onclick="checkLoadLevel(10)" onMouseOver="loadLevelStats(10)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #b60">Gluttony</h1>
+			<div class="levelRow">
+				<div class="level row3" onclick="checkLoadLevel(11)" onMouseOver="loadLevelStats(11)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row3" onclick="checkLoadLevel(12)" onMouseOver="loadLevelStats(12)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row3" onclick="checkLoadLevel(13)" onMouseOver="loadLevelStats(13)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row3" onclick="checkLoadLevel(14)" onMouseOver="loadLevelStats(14)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row3" onclick="checkLoadLevel(15)" onMouseOver="loadLevelStats(15)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #306">Greed</h1>
+			<div class="levelRow">
+				<div class="level row4" onclick="checkLoadLevel(16)" onMouseOver="loadLevelStats(16)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row4" onclick="checkLoadLevel(17)" onMouseOver="loadLevelStats(17)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row4" onclick="checkLoadLevel(18)" onMouseOver="loadLevelStats(18)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row4" onclick="checkLoadLevel(19)" onMouseOver="loadLevelStats(19)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row4" onclick="checkLoadLevel(20)" onMouseOver="loadLevelStats(20)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #40f">Wrath</h1>
+			<div class="levelRow">
+				<div class="level row5" onclick="checkLoadLevel(21)" onMouseOver="loadLevelStats(21)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row5" onclick="checkLoadLevel(22)" onMouseOver="loadLevelStats(22)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row5" onclick="checkLoadLevel(23)" onMouseOver="loadLevelStats(23)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row5" onclick="checkLoadLevel(24)" onMouseOver="loadLevelStats(24)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row5" onclick="checkLoadLevel(25)" onMouseOver="loadLevelStats(25)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #0b4">Heresy</h1>
+			<div class="levelRow">
+				<div class="level row6" onclick="checkLoadLevel(26)" onMouseOver="loadLevelStats(26)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row6" onclick="checkLoadLevel(27)" onMouseOver="loadLevelStats(27)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row6" onclick="checkLoadLevel(28)" onMouseOver="loadLevelStats(28)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row6" onclick="checkLoadLevel(29)" onMouseOver="loadLevelStats(29)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row6" onclick="checkLoadLevel(30)" onMouseOver="loadLevelStats(30)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #b30">Violence</h1>
+			<div class="levelRow">
+				<div class="level row7" onclick="checkLoadLevel(31)" onMouseOver="loadLevelStats(31)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row7" onclick="checkLoadLevel(32)" onMouseOver="loadLevelStats(32)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row7" onclick="checkLoadLevel(33)" onMouseOver="loadLevelStats(33)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row7" onclick="checkLoadLevel(34)" onMouseOver="loadLevelStats(34)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row7" onclick="checkLoadLevel(35)" onMouseOver="loadLevelStats(35)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #0cc">Fraud</h1>
+			<div class="levelRow">
+				<div class="level row8" onclick="checkLoadLevel(36)" onMouseOver="loadLevelStats(36)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row8" onclick="checkLoadLevel(37)" onMouseOver="loadLevelStats(37)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row8" onclick="checkLoadLevel(38)" onMouseOver="loadLevelStats(38)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row8" onclick="checkLoadLevel(39)" onMouseOver="loadLevelStats(39)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row8" onclick="checkLoadLevel(40)" onMouseOver="loadLevelStats(40)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; color: #f00">Treachery</h1>
+			<div class="levelRow" style="margin-bottom: 10px">
+				<div class="level row9" onclick="checkLoadLevel(41)" onMouseOver="loadLevelStats(41)" onMouseOut="loadLevelStats(0)">1</div>
+				<div class="level row9" onclick="checkLoadLevel(42)" onMouseOver="loadLevelStats(42)" onMouseOut="loadLevelStats(0)">2</div>
+				<div class="level row9" onclick="checkLoadLevel(43)" onMouseOver="loadLevelStats(43)" onMouseOut="loadLevelStats(0)">3</div>
+				<div class="level row9" onclick="checkLoadLevel(44)" onMouseOver="loadLevelStats(44)" onMouseOut="loadLevelStats(0)">4</div>
+				<div class="level row9" onclick="checkLoadLevel(45)" onMouseOver="loadLevelStats(45)" onMouseOut="loadLevelStats(0)">5</div>
+			</div>
+			<div id="hyperHell" style="display: none">
+				<h1 style="font-size: 48px; margin-bottom: 20px; margin-top: 40px; background: -webkit-linear-gradient(#f00, #f80); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hyper-Hell (bonus)</h1>
+				<div class="levelRow" style="margin-bottom: 10px">
+					<div class="level row10" onclick="checkLoadLevel(46)" onMouseOver="loadLevelStats(46)" onMouseOut="loadLevelStats(0)">1</div>
+					<div class="level row10" onclick="checkLoadLevel(47)" onMouseOver="loadLevelStats(47)" onMouseOut="loadLevelStats(0)">2</div>
+					<div class="level row10" onclick="checkLoadLevel(48)" onMouseOver="loadLevelStats(48)" onMouseOut="loadLevelStats(0)">3</div>
+					<div class="level row10" onclick="checkLoadLevel(49)" onMouseOver="loadLevelStats(49)" onMouseOut="loadLevelStats(0)">4</div>
+					<div class="level row10" onclick="checkLoadLevel(50)" onMouseOver="loadLevelStats(50)" onMouseOut="loadLevelStats(0)">5</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        </div>
     </body>
     <script>
-    var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmyfuckyoupaul","theonetruegodfuckyounathan"]
+    var passwords = ["password","imagefinder","hellbringer","industrialprogressor","missionariesofagod","leaderofanarmy","theonetruegod"]
     var cl = 0
     var texts = []
 
@@ -63,6 +164,10 @@
                 cl = i + 1
             }
         }
+        if (input.value == "golf") {
+            document.getElementById("total").style.display = "none"
+            document.getElementById("golff").style.display = ""
+        }
         
         for (var i=0;i<texts[cl-1].length;i++) {
             texts[cl-1][i].style.display = ""
@@ -71,4 +176,6 @@
         clt.innerText = "Clearance Level: " + cl
     }
 </script>
+    <script src="levelsv1104.js"></script>
+  <script src="scriptv1101.js"></script>
 </html>
