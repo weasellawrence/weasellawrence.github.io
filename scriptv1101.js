@@ -1,7 +1,7 @@
 debug = false
 renderDistance = 10
 testRange = 0.0001
-currentLevel = 1
+currentLevel = 50
 noOfHits = 0
 noOfDeaths = 0
 time = 0
@@ -36,7 +36,6 @@ function save() {
   localStorage.setItem("golfHellSave", JSON.stringify(game));
 }
 
-
 function load() {
 	reset()
 	let loadgame = JSON.parse(localStorage.getItem("golfHellSave"))
@@ -67,6 +66,7 @@ function importGame() {
     alert("Invalid input.")
   }
 }
+
 
 function loadGame(loadgame) {
   //Sets each variable in 'game' to the equivalent variable in 'loadgame' (the saved file)
