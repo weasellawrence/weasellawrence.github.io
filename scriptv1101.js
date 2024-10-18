@@ -11,7 +11,7 @@ finished = true
 inMenu = true
 mousePos = [0,0]
 antiGravity = false
-numberOfLevels = 55
+numberOfLevels = 60
 
 function reset() {
 	game = {
@@ -109,6 +109,21 @@ function loadLevel(x) {
 			break;
 		case 55:
 			levelData = lucifer
+			break;
+		case 56:
+			levelData = polPot
+			break;
+		case 57:
+			levelData = stalin
+			break;
+		case 58:
+			levelData = hitler
+			break;
+		case 59:
+			levelData = georgePig
+			break;
+		case 60:
+			levelData = otisPascal
 			break;
 		case 1:
 			levelData = limbo1
