@@ -400,7 +400,7 @@ function loadLevelStats(x) {
 				}
 			}
 		}
-		document.getElementById("levelStats").innerHTML = "<span style='color: #080'>" + totalLevelsBeaten + "/45 levels beaten <span id='stars'></span></span><br>Total hits: " + totalHits + "<br>Total time: " + formatTime(totalTime)
+		document.getElementById("levelStats").innerHTML = "<span style='color: #080'>" + totalLevelsBeaten + "/45 levels beaten </span><br>Total hits: " + totalHits + "<br>Total time: " + formatTime(totalTime)
 		if (totalLevelsBeaten >= 45) {
 			document.getElementById("hyperHell").style.display = "block"
 		}
