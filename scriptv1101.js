@@ -11,10 +11,11 @@ finished = true
 inMenu = true
 mousePos = [0,0]
 antiGravity = false
+numberOfLevels = 55
 
 function reset() {
 	game = {
-		levelsBeaten: new Array(55).fill(false),
+		levelsBeaten: new Array(numberOfLevels).fill(false),
 		levelHits: [],
 		levelFalls: [],
 		levelTime: []
@@ -378,7 +379,7 @@ function loadMenu() {
 	document.getElementById("keybinds").style.display = "none"
 	document.getElementById("levelStats").style.display = "block"
 	loadLevelStats(0)
-	for (i=0;i<55;i++) {
+	for (i=0;i<numberOfLevels;i++) {
 		if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
 		else if (i==0 || game.levelsBeaten[i-1]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
 		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
@@ -390,7 +391,7 @@ function loadLevelStats(x) {
 		totalLevelsBeaten = 0
 		totalHits = 0
 		totalTime = 0
-		for (i=0;i<50;i++) {
+		for (i=0;i<numberOfLevels;i++) {
 			if (game.levelsBeaten[i]) {
 				totalLevelsBeaten++
 				if (i<45) {
