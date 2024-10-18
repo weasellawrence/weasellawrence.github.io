@@ -15,9 +15,9 @@ antiGravity = false
 function reset() {
 	game = {
 		levelsBeaten: new Array(55).fill(false),
-		levelHits: [],
-		levelFalls: [],
-		levelTime: []
+		levelHits: new Array(50).fill(1),
+		levelFalls: new Array(50).fill(0),
+		levelTime: new Array(50).fill(1)
 	}
 }
 reset()
@@ -390,7 +390,7 @@ function loadLevelStats(x) {
 		totalLevelsBeaten = 0
 		totalHits = 0
 		totalTime = 0
-		for (i=0;i<game.levelsBeaten[].length();i++) {
+		for (i=0;i<55;i++) {
 			if (game.levelsBeaten[i]) {
 				totalLevelsBeaten++
 				if (i<45) {
