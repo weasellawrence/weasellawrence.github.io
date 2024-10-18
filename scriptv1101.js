@@ -390,7 +390,7 @@ function loadLevelStats(x) {
 		totalLevelsBeaten = 0
 		totalHits = 0
 		totalTime = 0
-		for (i=0;i<50;i++) {
+		for (i=0;i<game.levelsBeaten[].length();i++) {
 			if (game.levelsBeaten[i]) {
 				totalLevelsBeaten++
 				if (i<45) {
