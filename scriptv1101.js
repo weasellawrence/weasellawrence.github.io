@@ -392,7 +392,6 @@ function loadLevelStats(x) {
 			document.getElementById("stars").innerHTML += "<span style='color: #b80'>â˜…</span>"
 			document.getElementById("hyperHell").style.display = "block"
 		}
-		if (totalLevelsBeaten >= 50) document.getElementById("stars").innerHTML += "<span style='color: #b80'>â˜…</span>"
 	}
 	else if (game.levelsBeaten[x-1]) {document.getElementById("levelStats").innerHTML = "<span style='color: #088'>" + levelNames[x] + "</span><br>Least hits: " + game.levelHits[x-1] + ", Least time: " + formatTime(game.levelTime[x-1])}
 	else {document.getElementById("levelStats").innerHTML = "<span style='color: #088'>" + levelNames[x] + "</span><br>Level not completed"}
