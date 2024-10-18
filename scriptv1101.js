@@ -15,9 +15,9 @@ antiGravity = false
 function reset() {
 	game = {
 		levelsBeaten: new Array(55).fill(false),
-		levelHits: new Array(50).fill(1),
-		levelFalls: new Array(50).fill(0),
-		levelTime: new Array(50).fill(1)
+		levelHits: [],
+		levelFalls: [],
+		levelTime: []
 	}
 }
 reset()
@@ -288,7 +288,7 @@ function loadLevel(x) {
 	document.getElementById("hits").innerHTML = noOfHits
 	document.getElementById("deaths").innerHTML = noOfDeaths
 	document.getElementById("time").innerHTML = time
-	
+
 	document.getElementById("levelStats").style.display = "none"
 	if (currentLevel >= 666 && currentLevel <= 670) {
 		document.getElementById("overlay").style.display = "block"
@@ -378,7 +378,7 @@ function loadMenu() {
 	document.getElementById("keybinds").style.display = "none"
 	document.getElementById("levelStats").style.display = "block"
 	loadLevelStats(0)
-	for (i=0;i<game.levelsBeaten[].length;i++) {
+	for (i=0;i<55;i++) {
 		if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
 		else if (i==0 || game.levelsBeaten[i-1]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
 		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
@@ -390,7 +390,7 @@ function loadLevelStats(x) {
 		totalLevelsBeaten = 0
 		totalHits = 0
 		totalTime = 0
-		for (i=0;i<game.levelsBeaten[].length;i++) {
+		for (i=0;i<50;i++) {
 			if (game.levelsBeaten[i]) {
 				totalLevelsBeaten++
 				if (i<45) {
@@ -562,7 +562,7 @@ function update(x=1) {
 					}
 				}
 			}
-			
+
 			//Calculate X and Y again (so that debug display is correct)
 			if (xVel > 0) {nextXBorderPos = [(Math.ceil(xPos / 25 + testRange) * 25), ((Math.ceil(xPos / 25 + testRange) * 25) - xPos) * slope + yPos]}
 			else {nextXBorderPos = [(Math.floor(xPos / 25 - testRange) * 25), ((Math.floor(xPos / 25 - testRange) * 25) - xPos) * slope + yPos]}
@@ -580,14 +580,14 @@ function update(x=1) {
 			}
 		}
 	}
-	
+
 	if (!inMenu && !finished) {
 		renderGrid(xPos,yPos)
-		
+
 		time += ((Date.now() - timeSinceLastUpdate) / 1000)
 		timeSinceLastUpdate = Date.now()
 		document.getElementById("time").innerHTML = formatTime(time)
-		
+
 		if (debug) {
 			document.getElementById("debugStats").innerHTML = "Debug stats:<br>xPos: " + xPos + "<br>yPos: " + yPos + "<br>xVelocity: " + xVel + "<br>yVelocity: " + yVel + "<br>next frame position: " + finalPos + "<br>next X border position: " + nextXBorderPos + "<br>next Y border position: " + nextYBorderPos
 		}
@@ -654,8 +654,8 @@ function renderGrid(x,y) {
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
 		ctx.clearRect(0, 0, 500, 500);
-		
-		
+
+
 		renderSpace = [Math.floor(xPos / 25 - renderDistance), Math.ceil(xPos / 25 + renderDistance), Math.floor(yPos / 25 - renderDistance), Math.ceil(yPos / 25 + renderDistance)]
 		for (i=renderSpace[2];i<renderSpace[3]; i++) {
 			for (j=Math.max(renderSpace[0], 0);j<Math.min(renderSpace[1], gridWidth); j++) {
@@ -742,14 +742,14 @@ function renderGrid(x,y) {
 				}
 			}
 		}
-		
+
 		if (debug) {
 			ctx.fillStyle = "yellow";
 			ctx.fillRect((Math.floor(xPos / 25) * 25 - xPos + 250),(Math.floor(yPos / 25) * 25 - yPos + 250),25,25)
 			console.log(Math.floor(yPos / 25), Math.floor(xPos / 25))
 			console.log("Tile at current position is " + levelGrid[Math.floor(yPos / 25) * gridWidth + Math.floor(xPos / 25)])
 		}
-	
+
 		ctx.fillStyle = "#bbb";
 		ctx.strokeStyle = "#bbb";
 		//ctx.fillRect(245,245,10,10)
@@ -757,7 +757,7 @@ function renderGrid(x,y) {
 		ctx.arc(250,250,5,0,2*Math.PI);
 		ctx.fill();
 		ctx.stroke();
-		
+
 		if (debug) {
 			ctx.fillStyle = "blue";
 			ctx.fillRect(245+xVel,245+yVel,10,10)
@@ -766,7 +766,7 @@ function renderGrid(x,y) {
 			ctx.fillStyle = "lime";
 			ctx.fillRect((nextYBorderPos[0] - xPos + 247),(nextYBorderPos[1] - yPos + 247),6,6)
 		}
-		
+
 		if (!ballMoving && !finished) {
 			ctx.strokeStyle = "red";
 			ctx.moveTo(250, 250);
@@ -816,7 +816,7 @@ function handleMouseMove(event) {
 }
 
 document.addEventListener('click', function(){if (!ballMoving && !finished && !inMenu) hitBall(mousePos[0] / 10, mousePos[1] / 6)})
-	
+
 window.addEventListener("keydown", (event) => {
   if (event.keyCode === 27 && !finished && !inMenu) {
 		loadMenu()
