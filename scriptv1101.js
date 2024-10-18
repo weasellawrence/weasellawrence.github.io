@@ -95,7 +95,7 @@ function loadLevel(x) {
 	//Someone please tell me a better way to do this
 	switch (x) {
 		case 51:
-			levelData = demonin
+			levelData = e
 			break;
 		case 1:
 			levelData = limbo1
