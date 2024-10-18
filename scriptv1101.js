@@ -636,6 +636,10 @@ function renderGrid(x,y) {
 		canvas.style.backgroundImage = "linear-gradient(#f00, black)"
 		canvas.style.backgroundPosition = "0 0"
 	}
+	else if (currentLevel <= 60) {
+		canvas.style.backgroundImage = "url('celestialBack.png')"
+		canvas.style.backgroundPosition = -(xPos * 0.1) % 320 + "px " + -(yPos * 0.1) % 320 + "px"
+	}
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
 		ctx.clearRect(0, 0, 500, 500);
@@ -646,7 +650,7 @@ function renderGrid(x,y) {
 			for (j=Math.max(renderSpace[0], 0);j<Math.min(renderSpace[1], gridWidth); j++) {
 				//Creates dirt
 				if (levelGrid[i * gridWidth + j] == 1) {
-					if (currentLevel <= 5 || (currentLevel >= 666 && currentLevel <= 670)) {ctx.fillStyle = "#630"}
+					if (currentLevel <= 5 || (currentLevel >= 666 && currentLevel <= 670) || (currentLevel >= 51 && currentLevel <= 60)) {ctx.fillStyle = "#630"}
 					else if (currentLevel == 671) {ctx.fillStyle = "white"}
 					else if (currentLevel <= 10) {ctx.fillStyle = "#555"}
 					else if (currentLevel <= 15) {ctx.fillStyle = "#854"}
