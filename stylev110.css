@@ -140,6 +140,10 @@ p {
 	box-shadow: 4px 4px #f00, 8px 8px #f80;
 }
 
+.row11 {
+	box-shadow: 4px 4px #40f, 8px 8px #0b4;
+}
+
 button {
 	background-color: #ddd;
 	border: 4px solid #444;
