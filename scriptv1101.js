@@ -94,6 +94,9 @@ function loadLevel(x) {
 	if (currentLevel != x) currentLevel = x
 	//Someone please tell me a better way to do this
 	switch (x) {
+		case 0:
+			levelData = demonin
+			break;
 		case 1:
 			levelData = limbo1
 			break;
