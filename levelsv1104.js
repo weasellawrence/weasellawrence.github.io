@@ -1,4 +1,4 @@
-levelNames = ["Test level", "Limbo 1", "Limbo 2", "Limbo 3", "Limbo 4", "Limbo 5", "Lust 1", "Lust 2", "Lust 3", "Lust 4", "Lust 5", "Gluttony 1", "Gluttony 2", "Gluttony 3", "Gluttony 4", "Gluttony 5", "Greed 1", "Greed 2", "Greed 3", "Greed 4", "Greed 5", "Wrath 1", "Wrath 2", "Wrath 3", "Wrath 4", "Wrath 5", "Heresy 1", "Heresy 2", "Heresy 3", "Heresy 4", "Heresy 5", "Violence 1", "Violence 2", "Violence 3", "Violence 4", "Violence 5", "Fraud 1", "Fraud 2", "Fraud 3", "Fraud 4", "Fraud 5", "Treachery 1", "Treachery 2", "Treachery 3", "Treachery 4", "Treachery 5", "Caina", "Antenora", "Ptolomaea", "Judecca", "Satan"]
+levelNames = ["Test level", "Limbo 1", "Limbo 2", "Limbo 3", "Limbo 4", "Limbo 5", "Lust 1", "Lust 2", "Lust 3", "Lust 4", "Lust 5", "Gluttony 1", "Gluttony 2", "Gluttony 3", "Gluttony 4", "Gluttony 5", "Greed 1", "Greed 2", "Greed 3", "Greed 4", "Greed 5", "Wrath 1", "Wrath 2", "Wrath 3", "Wrath 4", "Wrath 5", "Heresy 1", "Heresy 2", "Heresy 3", "Heresy 4", "Heresy 5", "Violence 1", "Violence 2", "Violence 3", "Violence 4", "Violence 5", "Fraud 1", "Fraud 2", "Fraud 3", "Fraud 4", "Fraud 5", "Treachery 1", "Treachery 2", "Treachery 3", "Treachery 4", "Treachery 5", "Caina", "Antenora", "Ptolomaea", "Judecca", "Satan", "demonim"]
 
 testGrid = "010001006" +
 "1111110001" +
@@ -20,6 +20,20 @@ testGrid = "010001006" +
 "1000011001" +
 "1000000001" +
 "1111111111"
+
+demonim = "020000009" +
+"00000000000000000000" + 
+"00000000000000000000" + 
+"00020000033000000001" + 
+"00011111111111100001" + 
+"00000000000000000001" + 
+"00000000000000000001" + 
+"00000000000000000001" + 
+"00000000000000000011" + 
+"00000000000000001100" + 
+"0000000000111111000" + 
+"00000000010000000000" + 
+"11111111100000000000"
 
 limbo1 = "020000009" +
 "00000000000000000000" + 
