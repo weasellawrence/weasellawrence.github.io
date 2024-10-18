@@ -1,5 +1,18 @@
 levelNames = ["Test level", "Limbo 1", "Limbo 2", "Limbo 3", "Limbo 4", "Limbo 5", "Lust 1", "Lust 2", "Lust 3", "Lust 4", "Lust 5", "Gluttony 1", "Gluttony 2", "Gluttony 3", "Gluttony 4", "Gluttony 5", "Greed 1", "Greed 2", "Greed 3", "Greed 4", "Greed 5", "Wrath 1", "Wrath 2", "Wrath 3", "Wrath 4", "Wrath 5", "Heresy 1", "Heresy 2", "Heresy 3", "Heresy 4", "Heresy 5", "Violence 1", "Violence 2", "Violence 3", "Violence 4", "Violence 5", "Fraud 1", "Fraud 2", "Fraud 3", "Fraud 4", "Fraud 5", "Treachery 1", "Treachery 2", "Treachery 3", "Treachery 4", "Treachery 5", "Caina", "Antenora", "Ptolomaea", "Judecca", "Satan", "Demonim", "Casher", "Mocker", "Crofter", "Lucifer"]
 
+/*
+Level tag:
+010020020
+Split into 3
+010,020,020
+Simplify
+10,20,20
+First number is level width
+2nd number times 25 + 12.5 = Xpos
+3rd number times 25 +  12.5 = Ypos
+
+*/
+
 testGrid = "010001006" +
 "1111110001" +
 "1000000001" +
@@ -35,7 +48,7 @@ e = "020000009" +
 "00000000010000000000" + 
 "11111111100000000000"
 
-e2 = "020000009" +
+e2 = "020000030" +
 "00000000000000000000" + 
 "00000000000000000000" + 
 "00020000033000000001" + 
