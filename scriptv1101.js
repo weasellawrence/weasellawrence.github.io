@@ -14,7 +14,7 @@ antiGravity = false
 
 function reset() {
 	game = {
-		levelsBeaten: new Array(50).fill(false),
+		levelsBeaten: new Array(55).fill(false),
 		levelHits: [],
 		levelFalls: [],
 		levelTime: []
@@ -96,6 +96,18 @@ function loadLevel(x) {
 	switch (x) {
 		case 51:
 			levelData = e
+			break;
+		case 52:
+			levelData = e2
+			break;
+		case 53:
+			levelData = e3
+			break;
+		case 54:
+			levelData = e4
+			break;
+		case 55:
+			levelData = e5
 			break;
 		case 1:
 			levelData = limbo1
