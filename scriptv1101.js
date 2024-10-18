@@ -662,8 +662,12 @@ function renderGrid(x,y) {
 		canvas.style.backgroundImage = "linear-gradient(#f00, black)"
 		canvas.style.backgroundPosition = "0 0"
 	}
-	else if (currentLevel <= 60) {
+	else if (currentLevel <= 55) {
 		canvas.style.backgroundImage = "url('celestialBack.png')"
+		canvas.style.backgroundPosition = -(xPos * 0.1) % 320 + "px " + -(yPos * 0.1) % 320 + "px"
+	}
+	else if (currentLevel <= 60) {
+		canvas.style.backgroundImage = "linear-gradient(#306, #606)"
 		canvas.style.backgroundPosition = -(xPos * 0.1) % 320 + "px " + -(yPos * 0.1) % 320 + "px"
 	}
   if (canvas.getContext) {
