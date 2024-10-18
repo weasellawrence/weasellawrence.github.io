@@ -96,19 +96,19 @@ function loadLevel(x) {
 	//Someone please tell me a better way to do this
 	switch (x) {
 		case 51:
-			levelData = e
+			levelData = demonim
 			break;
 		case 52:
-			levelData = e2
+			levelData = casher
 			break;
 		case 53:
-			levelData = e3
+			levelData = mocker
 			break;
 		case 54:
-			levelData = e4
+			levelData = crofter
 			break;
 		case 55:
-			levelData = e5
+			levelData = lucifer
 			break;
 		case 1:
 			levelData = limbo1
