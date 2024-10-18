@@ -381,7 +381,7 @@ function loadMenu() {
 	loadLevelStats(0)
 	for (i=0;i<numberOfLevels;i++) {
 		if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
-		else if (i==0 || game.levelsBeaten[i-1] || i > 50 || i = 50) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
+		else if (i==0 || game.levelsBeaten[i-1] || i > 50) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
 		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
 	}
 }
