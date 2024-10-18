@@ -378,7 +378,7 @@ function loadMenu() {
 	document.getElementById("keybinds").style.display = "none"
 	document.getElementById("levelStats").style.display = "block"
 	loadLevelStats(0)
-	for (i=0;i<game.levelsBeaten[].length();i++) {
+	for (i=0;i<game.levelsBeaten[].length;i++) {
 		if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
 		else if (i==0 || game.levelsBeaten[i-1]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
 		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
@@ -390,7 +390,7 @@ function loadLevelStats(x) {
 		totalLevelsBeaten = 0
 		totalHits = 0
 		totalTime = 0
-		for (i=0;i<55;i++) {
+		for (i=0;i<game.levelsBeaten[].length;i++) {
 			if (game.levelsBeaten[i]) {
 				totalLevelsBeaten++
 				if (i<45) {
