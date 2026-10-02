@@ -395,10 +395,9 @@ function loadMenu() {
 	document.getElementById("keybinds").style.display = "none"
 	document.getElementById("levelStats").style.display = "block"
 	loadLevelStats(0)
+	//All levels look unlocked, none look beaten
 	for (i=0;i<numberOfLevels;i++) {
-		//if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
-		/*else*/ if (i==0 || game.levelsBeaten[i-1] || i > 50) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
-		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
+		document.getElementsByClassName("level")[i].style.backgroundColor = "#999"
 	}
 }
 
@@ -417,9 +416,8 @@ function loadLevelStats(x) {
 			}
 		}
 		document.getElementById("levelStats").innerHTML = "<span style='color: #080'>" + totalLevelsBeaten + "/45 levels beaten </span><br>Total hits: " + totalHits + "<br>Total time: " + formatTime(totalTime)
-		if (totalLevelsBeaten >= 45) {
-			document.getElementById("hyperHell").style.display = "block"
-		}
+		//Hyper Hell is always available
+		document.getElementById("hyperHell").style.display = "block"
 	}
 	else if (game.levelsBeaten[x-1]) {document.getElementById("levelStats").innerHTML = "<span style='color: #088'>" + levelNames[x] + "</span><br>Least hits: " + game.levelHits[x-1] + ", Least time: " + formatTime(game.levelTime[x-1])}
 	else {document.getElementById("levelStats").innerHTML = "<span style='color: #088'>" + levelNames[x] + "</span><br>Level not completed"}
