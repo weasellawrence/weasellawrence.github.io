@@ -330,7 +330,8 @@ function loadLevel(x) {
 }
 
 function checkLoadLevel(x) {
-	if (x==1 || game.levelsBeaten[x-2] || x > 50) loadLevel(x)
+	//if (x==1 || game.levelsBeaten[x-2] || x > 50) loadLevel(x)
+	 loadLevel(x)
 }
 
 function nextLevel() {
@@ -395,8 +396,8 @@ function loadMenu() {
 	document.getElementById("levelStats").style.display = "block"
 	loadLevelStats(0)
 	for (i=0;i<numberOfLevels;i++) {
-		if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
-		else if (i==0 || game.levelsBeaten[i-1] || i > 50) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
+		//if (game.levelsBeaten[i]) {document.getElementsByClassName("level")[i].style.backgroundColor = "#393"}
+		/*else*/ if (i==0 || game.levelsBeaten[i-1] || i > 50) {document.getElementsByClassName("level")[i].style.backgroundColor = "#999"}
 		else {document.getElementsByClassName("level")[i].style.backgroundColor = "#666"}
 	}
 }
